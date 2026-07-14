@@ -3,6 +3,10 @@ main() is stored in the code segment, and when executed, a stack frame is create
 ; tells the compiler where a statement ends. Without it, the compiler cannot parse instructions properly.*/
 #include <stdio.h>
 int main() {
-int x = 2;
+int x = 2, y;
+    printf("enter a number: ");
+    scanf("%d",&y);    
     printf("Value: %d\n", x);
+    printf("You entered: %d\n", y);
+    printf("Sum: %d\n", x + y);
     return 0; }
