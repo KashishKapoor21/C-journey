@@ -1,16 +1,31 @@
 #include<stdio.h> 
 int main(){ 
-    int a;
-    printf("Simple Calculator Starting...\nLoading modules..................\nREADY.\n"); 
+    int a,b;
+    char op;    
+    printf("Simple Calculator Starting...\nLoading modules.................\nREADY.\n"); 
     printf("Enter two numbers: ");
     scanf("%d %d",&a,&b);
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c",&op);
     printf("You entered: %d and %d\n", a, b);
-    printf("Sum: %d\n", a + b);
-    printf("Difference: %d\n", a - b);
-    printf("Product: %d\n", a * b);
-    if(b != 0) {
-        printf("Quotient: %d\n", a / b);
-    } else {
-        printf("Error: Division by zero is not allowed.\n");
+   if(op == '+'){
+    printf("SUM: %d", a + b);
+   }
+   else if(op == '-'){
+    printf("DIFFERENCE: %d", a - b);
+   }
+   else if(op == '*'){
+    printf("PRODUCT %d", a * b);
+   }
+   else if(op == '/'){
+    if(b != 0){printf("QUOTIENT: %d", a / b);
     }
-    return 0; }
+    else{
+        printf("Error: Division by zero is not allowed.");
+    }
+   }
+    else{
+     printf("Invalid operator entered.");
+    }
+    return 0;
+}
