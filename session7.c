@@ -1,10 +1,11 @@
 #include <stdio.h>
-void swap(int a, int b){
-    int c = a;
-    a = b;
-    b = c;
-    printf("%d %d", a, b);
+void swap(int *a, int *b){
+    int c = *a;
+    *a = *b;
+    *b = c;
 }
 int main(){
-    swap(20, 49);
+    int x = 20, y = 34;
+    swap(&x, &y);
+    printf("%d %d", x, y);
 }
