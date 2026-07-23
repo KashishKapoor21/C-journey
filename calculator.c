@@ -36,8 +36,10 @@ int main(){
                 printf("no history available.\n");
             }else{
                 printf("Last %d results: \n", count);
+                int *p = h;
                 for(int i = 0; i < count; i++){
-                    printf("%d\n", h[i]);
+                    printf("%d\n", *p);
+                    p++;
                 }
             }continue;
         }
