@@ -1,10 +1,9 @@
-#include <stdio.h>
+#include<stdio.h>
 int main(){
-    int arr[5] = {10, 20, 30, 40 , 60};
+    int arr[5] = {10,30,50,70,90};
     int *p = arr;
     for(int i = 0; i < 5; i++){
-    printf("%d ", *(p));
-    *p++;
-    }
-    return 0;
+        printf("%d\n", *p);
+        p++;
+    }return 0;
 }
